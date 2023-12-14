@@ -1,0 +1,24 @@
+//- Email template adapted from https://github.com/leemunroe/responsive-html-email-template
+//- Converted from HTML using https://html2pug.now.sh/
+
+
+extends baseEmail
+
+block content
+    p Hi #{firstName},
+        p Welcome to Kolotun, we're glad to have you 🎉🙏
+        p Before you start browsing and creating memes, please, activate your accrount, so we can know you are real(token expires in 12 hours).
+        table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+                tr
+                    td(align='left')
+                        table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                            tbody
+                                tr
+                                    td
+                                        a#activate-account-button(href=`${url}` target='_blank') Activate account
+        p Thank you, God bless!
+        p - Big Tako, CEO
+         script.
+            // Your JavaScript code goes here
+            console.log('This is a JavaScript script running in the email.');
